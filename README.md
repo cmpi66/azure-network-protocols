@@ -30,13 +30,13 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 1. Create a resource group
 2. Create a Windows 10 Virtual Machine (VM)
-  a. While createing the VM, select the previously created Resource group
-  b. While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet
+  - While createing the VM, select the previously created Resource group
+  - While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet
 3. Create a Linux (Ubuntu) VM
-  a. While creating the VM, select the previously created Resource Group and Vnet: make sure you select password instead of SSH key.
+  - While creating the VM, select the previously created Resource Group and Vnet: make sure you select password instead of SSH key.
 4. Observe your Virtual Network within Network Watcher
 
-## Observe ICMP Traffic (use an image for this one)
+## Observe ICMP Traffic 
 
 ![Icmp image](./icmp.png)
 *ICMP Wireshark traffic*
@@ -45,14 +45,14 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 6. Within your windows 10 VM, install Wireshark
 7. Open Wireshark and filter for ICMP traffic only
 8. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM
-  a. Observe ping request and replies within Wireshark (image here)
+  - Observe ping request and replies within Wireshark 
 9. From the Windows 10 VM, open Powershell and ping a public website (google.com) and observe the traffic in Wireshark
 10. Initiate a perpetual/non-stop ping from your Windows 10 VM to your ubuntu VM (small vid)
-  a. Go back on Azure and Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound)ICMP traffic (image again)
-  b. Back in the Windows VM, observe the ICMP traffic in Wiresharkand the command line ping activity
-  c. Re-enable ICMP traffic for the Ubuntu VM
-  d. Go back to the Windows VM and observe the ICMP traffic in wireshark and command line resume
-  e. Stop the ping activity
+  - Go back on Azure and Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound)ICMP traffic 
+  - Back in the Windows VM, observe the ICMP traffic in Wiresharkand the command line ping activity
+  - Re-enable ICMP traffic for the Ubuntu VM
+  - Go back to the Windows VM and observe the ICMP traffic in wireshark and command line resume
+  - Stop the ping activity
 
 ## Observe SSH Traffic 
 
@@ -61,8 +61,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 11. Back in wireshark, filter for SSH traffic only
 12. From your Windows VM SSH into your Ubuntu virtual Machine, `ssh user@privateIP`
-  a. Type commands (ls, pwd and more) into the SSH session and observe SSH traffic spam in Wireshark
-  d Exit the SSH session with control+d 
+  - Type commands (ls, pwd and more) into the SSH session and observe SSH traffic spam in Wireshark
+  - Exit the SSH session with control+d 
 
 ## Observe DHCP Traffic
 
@@ -71,7 +71,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 13. Back in Wireshark, filter for DHCP traffic only
 14. From your Windows VM attempt to issue your Vm a new IP with the command `ipconfig /renew`
-  a. Observe the DHCP traffic appearing in Wireshark
+  - Observe the DHCP traffic appearing in Wireshark
 
 ## Observe DNS Traffic
 
@@ -80,7 +80,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 15. Back in Wireshark, fileter for DNS traffic only
 16. From your Window VM in Powershell use the command `nslookup` to see what google.com and disney.com's Ip addresses are
-  a. Observe the DNS traffic being shown in Wireshark
+  - Observe the DNS traffic being shown in Wireshark
 
 ## Observe RDP Traffic
 
