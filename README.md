@@ -16,6 +16,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 ## Operating Systems Used 
 
+- Windows 10 (21H2)
+- Ubuntu Server 20.04
 
 ## Needed
 
