@@ -45,9 +45,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 8. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM
   - Observe ping request and replies within Wireshark 
 9. From the Windows 10 VM, open Powershell and ping a public website (google.com) and observe the traffic in Wireshark
-10. Initiate a perpetual/non-stop ping from your Windows 10 VM to your ubuntu VM (small vid)
-  - Go back on Azure and Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound)ICMP traffic 
-  - Back in the Windows VM, observe the ICMP traffic in Wiresharkand the command line ping activity
+10. Initiate a perpetual/non-stop ping from your Windows 10 VM to your ubuntu VM 
+  - Go back on Azure and Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic 
+  - Back in the Windows VM, observe the ICMP traffic in Wireshark and the command line ping activity
   - Re-enable ICMP traffic for the Ubuntu VM
   - Go back to the Windows VM and observe the ICMP traffic in wireshark and command line resume
   - Stop the ping activity
@@ -68,7 +68,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 *DCHP Wireshark traffic*
 
 13. Back in Wireshark, filter for DHCP traffic only
-14. From your Windows VM attempt to issue your Vm a new IP with the command `ipconfig /renew`
+14. From your Windows VM attempt to issue your VM a new IP with the command `ipconfig /renew`
   - Observe the DHCP traffic appearing in Wireshark
 
 ## Observe DNS Traffic
@@ -77,7 +77,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 *DNS Wireshark traffic*
 
 15. Back in Wireshark, fileter for DNS traffic only
-16. From your Window VM in Powershell use the command `nslookup` to see what google.com and disney.com's Ip addresses are
+16. From your Windows VM in Powershell use the command `nslookup` to see what google.com and disney.com's IP addresses are
   - Observe the DNS traffic being shown in Wireshark
 
 ## Observe RDP Traffic
@@ -91,22 +91,4 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ## Clean up our resources
 
 Now that we're done and we learned a bit about network protocols let's clean up our resources at Azure and delete all Resource groups and VM's. Make sure you verify resource group deletion. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
